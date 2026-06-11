@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIP39 Dotmap</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="title">
+        <div class="intro">
+          <p class="eyebrow">BIP39 Dotmap</p>
+          <h1 id="title">Tap dots to reveal a BIP39 word</h1>
+          <p class="hint">Each of the 12 dots represents a binary weight from 1 to 2048. The selected total maps to a word in the BIP39 English wordlist.</p>
+        </div>
+
+        <div class="tool">
+          <div class="dot-panel" aria-label="Dotmap grid">
+            <div class="dot-grid" id="dotGrid"></div>
+            <div class="controls" aria-label="Actions">
+              <button type="button" id="clearButton">Clear</button>
+              <button type="button" id="copyButton">Copy Word</button>
+            </div>
+          </div>
+
+          <aside class="result-panel" aria-live="polite">
+            <div class="stat">
+              <span>Index</span>
+              <strong id="indexValue">0</strong>
+            </div>
+            <div class="word-output" id="wordOutput">Select at least one dot</div>
+            <label class="lookup">
+              <span>Look up a dotmap from a word</span>
+              <input id="wordInput" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. abandon">
+            </label>
+            <div class="message" id="message"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="wordlist.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
